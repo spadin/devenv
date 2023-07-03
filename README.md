@@ -25,3 +25,15 @@ Starts this image with the current directory mounted to `/mnt/workdir` and sets 
 ```bash
 docker run -it --rm -v .:/mnt/workdir --workdir /mnt/workdir --hostname devenv spadin/devenv:latest
 ```
+
+#### Note
+
+Ctrl-p for navigating back in history doesn't work well out of the box. Need to update `~/.docker/config.json` and add the following into the json object. [Reddit source][1].
+
+```json
+{
+  "detachKeys": "ctrl-o,e"
+}
+```
+
+[1]: https://www.reddit.com/r/commandline/comments/jyobew/ctrlp_and_ctrln_from_readline_work_weirdly_in_a/
