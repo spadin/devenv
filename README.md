@@ -1,6 +1,6 @@
 # spadin/devenv
 
-Docker image of my development environment so I can save my dotfile configuration and get started developing on any computer with Docker right away.
+Docker image of my development environment so I can save my dotfile configuration and get started developing on any computer with Docker right away. Probably not very helpful for others aside from it being a good starting point for your own Docker-based development environment.
 
 ## build
 
