@@ -21,6 +21,8 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
+        tags: |
+          type=raw,value=latest,enable={{is_default_branch}}
         with:
           images: spadin/devenv
 
@@ -30,3 +32,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
