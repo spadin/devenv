@@ -23,7 +23,7 @@ docker push spadin/devenv
 Starts this image with the current directory mounted to `/mnt/workdir` and sets that as the working directory so it's the initial directory when you connect. Also sets hostname to `devenv` otherwise it'd be a random string.
 
 ```bash
-docker run -it --rm -v .:/mnt/workdir --workdir /mnt/workdir --hostname devenv spadin/devenv:latest
+docker run -it --rm -v .:/mnt/workdir --workdir /mnt/workdir --hostname devenv spadin/devenv:latest --platform linux/amd64
 ```
 
 #### Note
